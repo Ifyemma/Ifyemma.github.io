@@ -1,5 +1,5 @@
 .container{
-  (padding: 2rem;
+  padding: 2rem;
   
   
 
@@ -20,10 +20,15 @@
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
   border-radius: 0.5rem;
 }
+.slider::-webkit-scrollbar{
+  display: none;
+}
 
 .slider img{
   flex: 1 0 100%;
-  scroll-snap-aling: start;
+  scroll-snap-align: start;
+  width: 100%;
+  object-fit: cover;
   }
 
 .slider-nav{
@@ -50,17 +55,40 @@
   opacity: 1;
   
 }
-/*
-@keyframes animate{
-  0%{wbackground-repeat:  0px;}
-  10%{left: 0px;}
-  20%{left: 1200px;}
-  30%{left: 1200px;}
-  40%{left: 2400px;}
-  50%{left: 2400px;}
-  60%{left: 1200px;}
-  70%{left: 1200px;}
-  80%{left: 0px;}
-  90%{left: 0px;}
-  100%{left: 0px;}
+.slider-track{
+  display: flex;
+  width: 600;
+  animation: slide 18s infinite;
+}
+@keyframes slide{
+  0%, 10% {
+    transform: translateX(0);
+  }
+  11%, 20% {
+    transform: translateX(-100%);
+  }
+  21%, 30% {
+    transform: translateX(-200%);
+  }
+  31%, 40% {transform: translateX(-300%);
+  }
+  41%, 50% {
+    transform: translateX(-400%);}
+  51%, 60% {
+    transform: translateX(-500%);
+  }
+  61%, 70% {
+    transform: translateX(-600%);
+  }
+   71%, 80% {
+    transform: translateX(-700%);
+  }
+   81%, 90% {
+    transform: translateX(-800%);
+  }
+   91%, 100% {
+    transform: translateX(-900%);
+  }
+
+
 }
